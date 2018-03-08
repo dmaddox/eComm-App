@@ -7,12 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  post = {
-  	title: "Title",
-  	isFavorite: true
+  tweet = {
+  	body: "This is my tweet...",
+  	likesCount: 10,
+  	isLiked: true
   }
 
-  onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
-  	console.log("Favorite changed: ", eventArgs);
+  onLikeClicked(event: boolean) {
+  	console.log("Favorite changed: ", event);
+  	if (this.tweet.likesCount > 0)
+		this.tweet.likesCount = 0;
+	else 
+		this.tweet.likesCount = 1;
   }
 }
