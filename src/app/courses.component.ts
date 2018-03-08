@@ -16,22 +16,12 @@ import { Component } from '@angular/core';
 			<button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'" (click)="onSave($event)" >Save</button>
 		</div>
 		{{ text | summary:25}}
-		
-			<span 
-				class="fa-star" 
-				[class.fas]="starIsActive" 
-				[class.far]="!starIsActive"
-				(click)="onStarClick()"
-				>
-			</span>
-		
 		` 
 })
 export class CoursesComponent {
 	title = "List of courses";
 	courses;
 	isActive = true;
-	starIsActive = false;
 	name = "DMX";
 	onKeyUp() {
 		//if ($event.keyCode === 13) console.log("enter was pressed");
@@ -44,10 +34,6 @@ export class CoursesComponent {
 		$event.stopPropagation();
 		console.log("Button was clicked");
 		console.log($event);
-	}
-	onStarClick() {
-		this.starIsActive = !this.starIsActive;
-		console.log(this.starIsActive);
 	}
 	text = `
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
