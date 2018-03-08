@@ -1,3 +1,4 @@
+import { SummaryPipe } from './summary.pipe'
 import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
 import { AuthorsService } from './services/authors.service';
@@ -17,7 +18,8 @@ import { AuthorsComponent } from './authors/authors.component';
     AppComponent,
     CoursesComponent,
     CourseComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
