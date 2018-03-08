@@ -1,3 +1,4 @@
+import { MovieCasePipe } from './pipes/movie-case.pipe'
 import { SummaryPipe } from './summary.pipe'
 import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
@@ -19,7 +20,8 @@ import { AuthorsComponent } from './authors/authors.component';
     CoursesComponent,
     CourseComponent,
     AuthorsComponent,
-    SummaryPipe
+    SummaryPipe,
+    MovieCasePipe
   ],
   imports: [
     BrowserModule,

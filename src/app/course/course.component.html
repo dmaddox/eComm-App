@@ -1,3 +1,2 @@
-<p>
-  course works!
-</p>
+<input [(ngModel)]="movie" (keyup)="onKeyUp()" /><br/>
+{{ movie | movieCase }}

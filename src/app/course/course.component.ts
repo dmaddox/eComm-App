@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-course',
+  selector: 'course',
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.css']
 })
 export class CourseComponent implements OnInit {
+	movie = "";
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	onKeyUp() {
+		this.movie = this.movie;
+	}
 
 }
