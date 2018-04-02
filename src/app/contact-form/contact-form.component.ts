@@ -9,11 +9,15 @@ import { UsernameValidators } from './username.validators';
 })
 export class ContactFormComponent {
   form = new FormGroup({
-    username: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      UsernameValidators.cannotContainSpace
-      ]),
+    username: new FormControl('', 
+      // validators
+      [
+        Validators.required,
+        Validators.minLength(3),
+        UsernameValidators.cannotContainSpace,
+      ], 
+      // async validators
+      UsernameValidators.shouldBeUnique),
     password: new FormControl('', Validators.required)
   })
 
