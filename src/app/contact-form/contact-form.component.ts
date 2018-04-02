@@ -9,17 +9,19 @@ import { UsernameValidators } from './username.validators';
 })
 export class ContactFormComponent {
   form = new FormGroup({
-    username: new FormControl('', 
-      // validators
-      [
-        Validators.required,
-        Validators.minLength(3),
-        UsernameValidators.cannotContainSpace,
-      ], 
-      // async validators = third param
-      UsernameValidators.shouldBeUnique),
-    password: new FormControl('', Validators.required)
-  })
+    account: new FormGroup({
+      username: new FormControl('', 
+        // validators
+        [
+          Validators.required,
+          Validators.minLength(3),
+          UsernameValidators.cannotContainSpace,
+        ], 
+        // async validators = third param
+        UsernameValidators.shouldBeUnique),
+      password: new FormControl('', Validators.required)
+    })
+  });
 
   login() {
     this.form.setErrors({
@@ -28,6 +30,6 @@ export class ContactFormComponent {
   }
 
   get username() {
-    return this.form.get('username');
+    return this.form.get('account.username');
   }
 }
