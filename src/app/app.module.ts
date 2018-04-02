@@ -4,7 +4,7 @@ import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
 import { AuthorsService } from './services/authors.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 
@@ -35,7 +35,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
   	CoursesService,
