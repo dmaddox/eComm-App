@@ -1,4 +1,4 @@
-import { FavoriteChangedEventArgs } from './favorite/favorite.component'
+// import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,17 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tweet = {
-  	body: "This is my tweet...",
-  	likesCount: 10,
-  	isLiked: true
-  }
+  // tweet = {
+  // 	body: "This is my tweet...",
+  // 	likesCount: 10,
+  // 	isLiked: true
+  // };
 
-  onLikeClicked(event: boolean) {
-  	console.log("Favorite changed: ", event);
-  	if (this.tweet.likesCount > 0)
-		this.tweet.likesCount = 0;
-	else 
-		this.tweet.likesCount = 1;
-  }
+  courses = [1, 2];
+
+
+ //  onLikeClicked(event: boolean) {
+ //  	console.log("Favorite changed: ", event);
+ //  	if (this.tweet.likesCount > 0)
+	// 	this.tweet.likesCount = 0;
+	// else 
+	// 	this.tweet.likesCount = 1;
+ //  }
 }

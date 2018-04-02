@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css";
+/*@import "~bootstrap/dist/css/bootstrap.css";*/
 
 body {
 	padding: 20px;
+  color: #000;
 }
 
 div {
@@ -12,8 +13,7 @@ div {
 span {
 		padding: 45px;
 }
-.fa-star {
-	display: inline-block;
+.glyphicon {
 	font-size: 50px;
 	cursor: pointer;
 }

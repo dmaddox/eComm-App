@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './authors.component.html',
   styleUrls: ['./authors.component.css']
 })
-export class AuthorsComponent implements OnInit {
+export class AuthorsComponent {
 	title = "Authors:";
 	authors;
 
