@@ -1,5 +1,5 @@
 // import { FavoriteChangedEventArgs } from './favorite/favorite.component';
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+@Input('is-selected') isSelected: boolean;  // ('is-favorite') is the alias
+@Output('change') change = new EventEmitter(); // ('change') is the alias
  courses;
 
  loadCourses() {
@@ -35,4 +37,10 @@ export class AppComponent {
  trackCourse(index, course) {
    return course ? course.id : undefined;
  }
+
+
+   onClick() {
+    this.isSelected = !this.isSelected;
+    this.change.emit({newValue: this.isSelected});
+  }
 }

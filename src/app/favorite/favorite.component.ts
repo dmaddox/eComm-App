@@ -6,12 +6,12 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   styleUrls: ['./favorite.component.css']
 })
 export class FavoriteComponent {
-	@Input('is-favorite') isFavorite: boolean;  // ('is-favorite') is the alias
+	@Input('is-selected') isSelected: boolean;  // ('is-favorite') is the alias
 	@Output('change') change = new EventEmitter(); // ('change') is the alias
 
 	onClick() {
-		this.isFavorite = !this.isFavorite;
-		this.change.emit({newValue: this.isFavorite});
+		this.isSelected = !this.isSelected;
+		this.change.emit({newValue: this.isSelected});
 	}
 
 }
