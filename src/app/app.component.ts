@@ -7,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- viewMode = 'map';
+ courses = [
+   { id: 1, name: 'course1 ' },
+   { id: 2, name: 'course2 ' },
+   { id: 3, name: 'course3 ' }
+ ];
+
+ onAdd() {
+   this.courses.push({ id: 4, name: 'course4'});
+ }
+
+  onChange(course) {
+   course.name = "UPDATED";
+ }
+   
+
+ onRemove(course) {
+   console.log(course);
+   let index = this.courses.indexOf(course);
+   console.log(index);
+   this.courses.splice(index, 1);
+ }
 }
