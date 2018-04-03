@@ -1,5 +1,6 @@
-import { MovieCasePipe } from './pipes/movie-case.pipe'
-import { SummaryPipe } from './summary.pipe'
+import { HttpModule } from '@angular/http';
+import { MovieCasePipe } from './pipes/movie-case.pipe';
+import { SummaryPipe } from './summary.pipe';
 import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
 import { AuthorsService } from './services/authors.service';
@@ -18,6 +19,7 @@ import { LikeComponent } from './like/like.component';
 import { InputFormatDirective } from './directives/input-format/input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { PostsComponent } from './posts/posts.component';
 
 
 @NgModule({
@@ -33,12 +35,14 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
     LikeComponent,
     InputFormatDirective,
     ContactFormComponent,
-    NewCourseFormComponent
+    NewCourseFormComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [
   	CoursesService,
