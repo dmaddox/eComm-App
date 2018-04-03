@@ -4,6 +4,7 @@ import { SummaryPipe } from './summary.pipe';
 import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
 import { AuthorsService } from './services/authors.service';
+import { PostService } from './services/post.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -45,6 +46,7 @@ import { PostsComponent } from './posts/posts.component';
     HttpModule
   ],
   providers: [
+    PostService,
   	CoursesService,
     AuthorsService
   ],
